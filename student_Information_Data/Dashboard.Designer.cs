@@ -38,7 +38,6 @@
             cmbCourse = new ComboBox();
             cmbSection = new ComboBox();
             txtAge = new TextBox();
-            txtBrithdate = new TextBox();
             btnSave = new Button();
             btnDelete = new Button();
             label3 = new Label();
@@ -49,6 +48,7 @@
             label8 = new Label();
             label9 = new Label();
             txtID = new TextBox();
+            mnthBirthdate = new MonthCalendar();
             ((System.ComponentModel.ISupportInitialize)dgvStudents).BeginInit();
             SuspendLayout();
             // 
@@ -85,7 +85,7 @@
             dgvStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvStudents.Location = new Point(19, 92);
             dgvStudents.Name = "dgvStudents";
-            dgvStudents.Size = new Size(494, 347);
+            dgvStudents.Size = new Size(494, 573);
             dgvStudents.TabIndex = 3;
             // 
             // label2
@@ -103,7 +103,7 @@
             txtFirstname.Font = new Font("Segoe UI", 14.25F);
             txtFirstname.Location = new Point(677, 126);
             txtFirstname.Name = "txtFirstname";
-            txtFirstname.Size = new Size(204, 33);
+            txtFirstname.Size = new Size(225, 33);
             txtFirstname.TabIndex = 5;
             // 
             // txtLastname
@@ -111,7 +111,7 @@
             txtLastname.Font = new Font("Segoe UI", 14.25F);
             txtLastname.Location = new Point(678, 164);
             txtLastname.Name = "txtLastname";
-            txtLastname.Size = new Size(204, 33);
+            txtLastname.Size = new Size(225, 33);
             txtLastname.TabIndex = 6;
             // 
             // cmbCourse
@@ -120,7 +120,7 @@
             cmbCourse.FormattingEnabled = true;
             cmbCourse.Location = new Point(678, 202);
             cmbCourse.Name = "cmbCourse";
-            cmbCourse.Size = new Size(204, 33);
+            cmbCourse.Size = new Size(226, 33);
             cmbCourse.TabIndex = 7;
             // 
             // cmbSection
@@ -129,7 +129,7 @@
             cmbSection.FormattingEnabled = true;
             cmbSection.Location = new Point(678, 241);
             cmbSection.Name = "cmbSection";
-            cmbSection.Size = new Size(204, 33);
+            cmbSection.Size = new Size(226, 33);
             cmbSection.TabIndex = 8;
             // 
             // txtAge
@@ -137,22 +137,14 @@
             txtAge.Font = new Font("Segoe UI", 14.25F);
             txtAge.Location = new Point(678, 279);
             txtAge.Name = "txtAge";
-            txtAge.Size = new Size(204, 33);
+            txtAge.Size = new Size(226, 33);
             txtAge.TabIndex = 9;
-            // 
-            // txtBrithdate
-            // 
-            txtBrithdate.Font = new Font("Segoe UI", 14.25F);
-            txtBrithdate.Location = new Point(677, 316);
-            txtBrithdate.Name = "txtBrithdate";
-            txtBrithdate.Size = new Size(204, 33);
-            txtBrithdate.TabIndex = 10;
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(678, 355);
+            btnSave.Location = new Point(679, 498);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(203, 30);
+            btnSave.Size = new Size(223, 30);
             btnSave.TabIndex = 11;
             btnSave.Text = "SAVE RECORD";
             btnSave.UseVisualStyleBackColor = true;
@@ -160,9 +152,9 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(679, 391);
+            btnDelete.Location = new Point(680, 534);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(203, 30);
+            btnDelete.Size = new Size(223, 30);
             btnDelete.TabIndex = 12;
             btnDelete.Text = "DELETE RECORD";
             btnDelete.UseVisualStyleBackColor = true;
@@ -244,15 +236,22 @@
             txtID.Font = new Font("Segoe UI", 14.25F);
             txtID.Location = new Point(679, 87);
             txtID.Name = "txtID";
-            txtID.Size = new Size(204, 33);
+            txtID.Size = new Size(223, 33);
             txtID.TabIndex = 20;
+            // 
+            // mnthBirthdate
+            // 
+            mnthBirthdate.Location = new Point(677, 324);
+            mnthBirthdate.Name = "mnthBirthdate";
+            mnthBirthdate.TabIndex = 21;
             // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LimeGreen;
-            ClientSize = new Size(969, 450);
+            ClientSize = new Size(969, 677);
+            Controls.Add(mnthBirthdate);
             Controls.Add(txtID);
             Controls.Add(label9);
             Controls.Add(label8);
@@ -263,7 +262,6 @@
             Controls.Add(label3);
             Controls.Add(btnDelete);
             Controls.Add(btnSave);
-            Controls.Add(txtBrithdate);
             Controls.Add(txtAge);
             Controls.Add(cmbSection);
             Controls.Add(cmbCourse);
@@ -295,7 +293,6 @@
         private ComboBox cmbCourse;
         private ComboBox cmbSection;
         private TextBox txtAge;
-        private TextBox txtBrithdate;
         private Button btnSave;
         private Button btnDelete;
         private Label label3;
@@ -306,5 +303,6 @@
         private Label label8;
         private Label label9;
         private TextBox txtID;
+        private MonthCalendar mnthBirthdate;
     }
 }

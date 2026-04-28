@@ -51,17 +51,8 @@ namespace student_Information_Data
                 {
                     MessageBox.Show("Login Successful!");
                     // Open Student Dashboard form
-                    Student_Dashboard studentDashboard = new Student_Dashboard();
-                    studentDashboard.Show();
-                    // Hide current Login form
-                    this.Hide();
-                }
-                else if (count == 1)
-                {
-                    MessageBox.Show("Login Successful!");
-                    // Open Dashboard form
-                    Dashboard dashboard = new Dashboard();
-                    dashboard.Show();
+                    GradingSystem grade = new GradingSystem();
+                    grade.Show();
                     // Hide current Login form
                     this.Hide();
                 }

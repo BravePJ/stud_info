@@ -38,8 +38,6 @@ namespace student_Information_Data
             string lastname = txtLastname.Text.Trim();
             string course = cmbCourse.SelectedItem?.ToString();
             string section = cmbSection.SelectedItem?.ToString();
-            string birthdate = txtBirthdate.Text.Trim();
-            string ID = txtID.Text.Trim();
             int age;
             // Validate inputs
             if (string.IsNullOrEmpty(firstname) || string.IsNullOrEmpty
@@ -73,8 +71,6 @@ namespace student_Information_Data
                 cmd.Parameters.AddWithValue("@course", course);
                 cmd.Parameters.AddWithValue("@section", section);
                 cmd.Parameters.AddWithValue("@age", age);
-                cmd.Parameters.AddWithValue("@birthdate", birthdate);
-                cmd.Parameters.AddWithValue("@id", ID);
 
                 // Execute the command
                 cmd.ExecuteNonQuery();
@@ -90,8 +86,7 @@ namespace student_Information_Data
                 cmbCourse.SelectedIndex = -1;
                 cmbSection.SelectedIndex = -1;
                 txtAge.Clear();
-                txtBirthdate.Clear();
-                txtID.Clear();
+
             }
             catch (Exception ex)
             {
@@ -108,6 +103,11 @@ namespace student_Information_Data
             Form1 form1 = new Form1();
             form1.Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

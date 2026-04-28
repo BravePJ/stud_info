@@ -41,10 +41,12 @@ namespace student_Information_Data
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            TeacherLogIn teacherLogIn = new TeacherLogIn();
-            teacherLogIn.Show();
-            // Hide current Login form
-            this.Hide();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+             this.Close();
         }
     }
 }

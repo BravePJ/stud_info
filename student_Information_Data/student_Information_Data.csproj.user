@@ -13,10 +13,7 @@
     <Compile Update="StudentLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Student_Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="TeacherLogIn.cs">
+    <Compile Update="GradingSystem.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

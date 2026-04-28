@@ -107,7 +107,6 @@ DataGridViewCellEventArgs e)
                 cmbCourse.Text = row.Cells["course"].Value.ToString();
                 cmbSection.Text = row.Cells["section"].Value.ToString();
                 txtAge.Text = row.Cells["age"].Value.ToString();
-                txtBrithdate.Text = row.Cells["birthdate"].Value.ToString();
             }
         }
 
@@ -138,7 +137,6 @@ DataGridViewCellEventArgs e)
             string lastName = txtLastname.Text.Trim();
             string course = cmbCourse.SelectedItem.ToString();
             string section = cmbSection.SelectedItem.ToString();
-            string birthdate = txtBrithdate.Text.Trim();
             int age;
             int ID;
             // Validate ID
@@ -188,7 +186,7 @@ WHERE id=@id";
                     cmd.Parameters.AddWithValue("@course", cmbCourse.Text);
                     cmd.Parameters.AddWithValue("@section", cmbSection.Text);
                     cmd.Parameters.AddWithValue("@age", txtAge.Text);
-                    cmd.Parameters.AddWithValue("@birthdate", txtBrithdate.Text);
+
                     // Execute the command
                     cmd.ExecuteNonQuery();
                 }
@@ -200,7 +198,6 @@ WHERE id=@id";
                 cmbCourse.SelectedIndex = -1;
                 cmbSection.SelectedIndex = -1;
                 txtAge.Clear();
-                txtBrithdate.Clear();
                 LoadStudents();
             }
             catch (Exception ex)
@@ -256,7 +253,6 @@ WHERE id=@id";
                 cmbCourse.SelectedIndex = -1;
                 cmbSection.SelectedIndex = -1;
                 txtAge.Clear();
-                txtBrithdate.Clear();
                 LoadStudents();
             }
             catch (Exception ex)
